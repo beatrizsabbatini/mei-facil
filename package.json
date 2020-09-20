@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@expo-google-fonts/poppins": "^0.1.0",
     "@expo-google-fonts/roboto": "^0.1.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.7.3",

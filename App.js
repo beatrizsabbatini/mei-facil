@@ -1,4 +1,8 @@
 import {
+  Poppins_500Medium,
+  Poppins_600SemiBold,
+} from '@expo-google-fonts/poppins';
+import {
   Roboto_300Light,
   Roboto_400Regular,
   Roboto_500Medium,
@@ -17,6 +21,8 @@ const App = () => {
     Roboto_300Light,
     Roboto_400Regular,
     Roboto_500Medium,
+    Poppins_500Medium,
+    Poppins_600SemiBold,
   });
 
   if (!fontsLoaded) {

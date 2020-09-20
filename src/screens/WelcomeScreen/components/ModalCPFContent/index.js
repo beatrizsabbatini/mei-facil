@@ -5,7 +5,7 @@ import { Keyboard, Text, View } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text';
 import Button from '../../../../components/Button';
 import { colors } from '../../../../styles';
-import styles from './styles';
+import styles from '../styles';
 
 const ModalCPFContent = ({ setPasswordModalVisible }) => {
   const [cpf, setCpf] = useState('');
@@ -66,6 +66,7 @@ const ModalCPFContent = ({ setPasswordModalVisible }) => {
       </View>
       <View style={styles.buttonContainer}>
         <Button
+          onPress={() => setPasswordModalVisible(true)}
           disabled={!isValid}
           text="Continuar"
           icon={
