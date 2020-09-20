@@ -1,10 +1,13 @@
 const fonts = {
-  input: 16,
-  regular: 14,
-  medium: 12,
-  small: 11,
+  regular: 16,
+  medium: 14,
+  small: 13,
   tiny: 10,
-  big: 22,
+  large: 18,
+  big: 25,
+  robotoBold: 'Roboto_700Bold',
+  robotoThin: 'Roboto_300Light',
+  robotoRegular: 'Roboto_400Regular',
 };
 
 export default fonts;
