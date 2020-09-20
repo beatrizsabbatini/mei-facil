@@ -1,14 +1,14 @@
 import React from 'react';
 import { Image } from 'react-native';
-import Logo from '../../assets/logo.png';
+import LogoImage from '../../assets/logo.png';
 
-const LogoComponent = () => {
+const Logo = () => {
   return (
     <Image
-      source={Logo}
+      source={LogoImage}
       style={{ resizeMode: 'contain', height: 50, width: 200 }}
     />
   );
 };
 
-export default LogoComponent;
+export default Logo;
