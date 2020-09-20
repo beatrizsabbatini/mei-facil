@@ -11,7 +11,7 @@ import ModalCPFContent from './components/ModalCPFContent';
 import ModalPasswordContent from './components/ModalPasswordContent';
 import styles from './styles';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   const welcomeMessageRef = useRef(null);
   const [messageVisible, setMessageVisible] = useState(false);
   const [modalCPFOpen, setModalCPFOpen] = useState(false);
@@ -71,7 +71,11 @@ const WelcomeScreen = () => {
             modalVisible={modalPasswordOpen}
             setModalVisible={setModalPasswordOpen}
           >
-            <ModalPasswordContent />
+            <ModalPasswordContent
+              navigation={navigation}
+              setCPFModalVisible={setModalCPFOpen}
+              setPasswordModalVisible={setModalPasswordOpen}
+            />
           </Modal>
         </Animatable.View>
       )}
