@@ -1,6 +1,7 @@
 import {
   Roboto_300Light,
   Roboto_400Regular,
+  Roboto_500Medium,
   Roboto_700Bold,
   useFonts,
 } from '@expo-google-fonts/roboto';
@@ -10,11 +11,12 @@ import * as React from 'react';
 import 'react-native-gesture-handler';
 import AppNavigator from './src/routes';
 
-export default function App() {
+const App = () => {
   let [fontsLoaded] = useFonts({
     Roboto_700Bold,
     Roboto_300Light,
     Roboto_400Regular,
+    Roboto_500Medium,
   });
 
   if (!fontsLoaded) {
@@ -26,4 +28,6 @@ export default function App() {
       </NavigationContainer>
     );
   }
-}
+};
+
+export default App;

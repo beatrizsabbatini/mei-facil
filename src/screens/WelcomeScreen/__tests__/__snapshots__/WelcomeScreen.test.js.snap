@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00A5EF",
+      "flex": 2,
+      "justifyContent": "space-between",
+      "padding": 25,
+    }
+  }
+>
+  <View
+    forwardedRef={[Function]}
+    style={
+      Object {
+        "opacity": 0,
+        "transform": Array [
+          Object {
+            "translateY": -100,
+          },
+        ],
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 50,
+          "resizeMode": "contain",
+          "width": 200,
+        }
+      }
+    />
+  </View>
+</View>
+`;

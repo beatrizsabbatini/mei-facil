@@ -1,12 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { colors, fonts, metrics } from '../../styles';
+import { fonts, metrics } from '../../styles';
 
 const styles = StyleSheet.create({
   buttonContainer: {
     marginVertical: metrics.doubleBaseMargin,
     paddingHorizontal: metrics.doubleBaseMargin,
     flexDirection: 'row',
-    backgroundColor: colors.Secondary,
     width: '100%',
     height: 50,
     alignItems: 'center',
@@ -23,7 +22,6 @@ const styles = StyleSheet.create({
   },
   buttonTitle: {
     fontSize: fonts.regular,
-    color: colors.Black,
     fontFamily: fonts.robotoBold,
     textAlign: 'center',
     textTransform: 'uppercase',

@@ -8,6 +8,7 @@ const fonts = {
   robotoBold: 'Roboto_700Bold',
   robotoThin: 'Roboto_300Light',
   robotoRegular: 'Roboto_400Regular',
+  robotoMedium: 'Roboto_500Medium',
 };
 
 export default fonts;

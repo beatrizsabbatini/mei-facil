@@ -1,17 +1,22 @@
 import { Fontisto } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import React, { useRef, useState } from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import Button from '../../components/Button';
 import Logo from '../../components/Logo';
+import Modal from '../../components/Modal';
 import { colors } from '../../styles';
+import ModalCPFContent from './components/ModalCPFContent';
+import ModalPasswordContent from './components/ModalPasswordContent';
 import styles from './styles';
 
 const WelcomeScreen = () => {
   const welcomeMessageRef = useRef(null);
   const [messageVisible, setMessageVisible] = useState(false);
+  const [modalCPFOpen, setModalCPFOpen] = useState(false);
+  const [modalPasswordOpen, setModalPasswordOpen] = useState(false);
+
   async function openBrowser() {
     await WebBrowser.openBrowserAsync('https://www.meifacil.com/duvidas');
   }
@@ -43,6 +48,7 @@ const WelcomeScreen = () => {
           </View>
           <View style={styles.basicView}>
             <Button
+              onPress={() => setModalCPFOpen(true)}
               text="Tenho CNPJ mei"
               icon={
                 <Fontisto name="arrow-right-l" size={24} color={colors.Black} />
@@ -58,6 +64,15 @@ const WelcomeScreen = () => {
               <Text style={styles.frequentQuestions}>perguntas frequentes</Text>
             </TouchableOpacity>
           </View>
+          <Modal modalVisible={modalCPFOpen} setModalVisible={setModalCPFOpen}>
+            <ModalCPFContent setPasswordModalVisible={setModalPasswordOpen} />
+          </Modal>
+          <Modal
+            modalVisible={modalPasswordOpen}
+            setModalVisible={setModalPasswordOpen}
+          >
+            <ModalPasswordContent />
+          </Modal>
         </Animatable.View>
       )}
     </View>
