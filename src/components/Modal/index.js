@@ -8,19 +8,19 @@ import { colors } from '../../styles';
 import styles from './styles';
 
 const ModalComponent = ({ children, modalVisible, setModalVisible }) => {
-  return (
-    <Modal animationType="slide" transparent={true} visible={modalVisible}>
-      <View style={styles.modalContainer}>
-        <TouchableOpacity
-          onPress={() => setModalVisible(!modalVisible)}
-          style={styles.closeIcon}
-        >
-          <AntDesign name="close" size={24} color={colors.Secondary} />
-        </TouchableOpacity>
-        {children}
-      </View>
-    </Modal>
-  );
+	return (
+		<Modal animationType="slide" transparent={true} visible={modalVisible}>
+			<View style={styles.modalContainer}>
+				<TouchableOpacity
+					onPress={() => setModalVisible(!modalVisible)}
+					style={styles.closeIcon}
+				>
+					<AntDesign name="close" size={24} color={colors.Secondary} />
+				</TouchableOpacity>
+				{children}
+			</View>
+		</Modal>
+	);
 };
 
 export default ModalComponent;
