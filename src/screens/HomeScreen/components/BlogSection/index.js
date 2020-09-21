@@ -24,9 +24,11 @@ const BlogSection = () => {
         showsHorizontalScrollIndicator={false}
         renderItem={({ item, index }) => {
           return (
-            <TouchableOpacity onPress={() => openBrowser(item.url)}>
+            <TouchableOpacity
+              key={item.id.toString()}
+              onPress={() => openBrowser(item.url)}
+            >
               <BasicContainer
-                key={item.id.toString()}
                 style={[
                   styles.container,
                   index === 0 && { marginLeft: metrics.doubleBaseMargin },
