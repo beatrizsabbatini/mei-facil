@@ -7,7 +7,7 @@ const NotificationsScreen = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       {notificationsData.map((item) => (
-        <NotificationItem item={item} key={item.id} />
+        <NotificationItem item={item} key={item.id.toString()} />
       ))}
     </ScrollView>
   );
