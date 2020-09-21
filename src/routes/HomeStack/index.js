@@ -45,7 +45,7 @@ const HomeNavigator = ({ navigation }) => {
             >
               <FontAwesome5
                 name="user"
-                size={20}
+                size={19}
                 color={colors.White}
                 style={{ paddingLeft: 40 }}
               />
