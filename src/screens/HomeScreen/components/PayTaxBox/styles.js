@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.Primary,
     padding: metrics.baseMargin,
-    width: '90%',
+    width: '100%',
     alignSelf: 'center',
     marginVertical: metrics.doubleBaseMargin,
     borderRadius: 5,

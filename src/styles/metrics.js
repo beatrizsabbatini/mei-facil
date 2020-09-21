@@ -6,6 +6,7 @@ const metrics = {
   bigMargin: 25,
   smallMargin: 5,
   baseMargin: 10,
+  regularMargin: 15,
   doubleBaseMargin: 20,
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
@@ -14,6 +15,7 @@ const metrics = {
   statusBarHeight: Platform.OS === 'ios' ? 20 : 0,
   baseRadius: 25,
   smallRadius: 8,
+  tinyRadius: 6,
 };
 
 export default metrics;
