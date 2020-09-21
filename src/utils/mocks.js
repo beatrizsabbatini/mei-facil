@@ -1,16 +1,20 @@
 import Certificate from '../assets/badge-with-a-star.png';
 import BillOfExchange from '../assets/barcode.png';
 import CrownChatBulb from '../assets/bulb.png';
+import Clipboard from '../assets/clipboard.png';
 import CreditCardMachine from '../assets/credit-card-machine.png';
 import CreditCard from '../assets/credit-card.png';
 import DAS from '../assets/das.png';
 import DollarSign from '../assets/dollarSign.png';
 import ExclamationMark from '../assets/exclamation.png';
 import Heart from '../assets/heart.png';
+import Info from '../assets/info.png';
 import Questions from '../assets/information.png';
 import Invoice from '../assets/invoice.png';
+import Logout from '../assets/logout.png';
 import NF from '../assets/nf.png';
 import TV from '../assets/tv.png';
+import UserBox from '../assets/user-box.png';
 import UserPaper from '../assets/userPaper.png';
 import WhatsApp from '../assets/whatsapp.png';
 
@@ -179,4 +183,26 @@ export const notificationsData = [
     imgPath: ExclamationMark,
     date: '11 set',
   },
+];
+
+export const profileButtonsData = [
+  {
+    id: 0,
+    title: 'Dados Pessoais',
+    navigateTo: 'HomeScreen',
+    imgPath: UserBox,
+  },
+  {
+    id: 1,
+    title: 'Dados da Empresa',
+    navigateTo: 'HomeScreen',
+    imgPath: Clipboard,
+  },
+  {
+    id: 2,
+    title: 'Informações Gerais',
+    navigateTo: 'HomeScreen',
+    imgPath: Info,
+  },
+  { id: 3, title: 'Sair do Aplicativo', navigateTo: 'Login', imgPath: Logout },
 ];

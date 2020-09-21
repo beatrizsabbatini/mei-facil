@@ -16,5 +16,6 @@ export default {
   ButtonTextDisabled: '#999999',
   Grey: '#797D7F',
   TextGrey: '#6A6E6F',
+  TitleGrey: '#505050',
   BackgroundGrey: '#DDDDDD',
 };
