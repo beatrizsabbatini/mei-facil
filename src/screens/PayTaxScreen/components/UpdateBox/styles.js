@@ -12,17 +12,20 @@ const styles = StyleSheet.create({
 	title:{
 		color: colors.TitleBlack,
 		fontFamily: fonts.robotoBold,
-		fontSize: fonts.large,
+		fontSize: 22,
     
 	},
 	subtitle: {
+		marginVertical: metrics.baseMargin,
 		fontFamily: fonts.robotoRegular,
-		fontSize: fonts.medium
+		fontSize: fonts.regular,
+		lineHeight: 22
 	},
 	message: {
+		marginVertical: metrics.smallMargin,
 		fontFamily: fonts.robotoRegular,
 		fontSize: fonts.small,
-		color: colors.TitleGrey
+		color: colors.ButtonTextDisabled
 	}
 });
 
