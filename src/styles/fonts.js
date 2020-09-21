@@ -5,6 +5,7 @@ const fonts = {
   tiny: 10,
   large: 18,
   big: 25,
+  hero: 30,
   robotoBold: 'Roboto_700Bold',
   robotoThin: 'Roboto_300Light',
   robotoRegular: 'Roboto_400Regular',

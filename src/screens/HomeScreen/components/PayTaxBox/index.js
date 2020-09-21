@@ -1,6 +1,9 @@
-import * as WebBrowser from 'expo-web-browser';
+
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
+
+import * as WebBrowser from 'expo-web-browser';
+
 import styles from './styles';
 
 const PayTaxBox = () => {

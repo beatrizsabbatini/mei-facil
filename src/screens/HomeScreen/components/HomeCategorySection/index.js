@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+
 import BasicTitle from '../../../../components/BasicTitle';
 import CategoriesList from '../../../../components/CategoriesList';
 import { metrics } from '../../../../styles';

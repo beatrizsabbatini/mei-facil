@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
+
 import { statuses } from '../../utils/constants';
 import styles from './styles';
 

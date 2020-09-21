@@ -1,8 +1,10 @@
-import { Fontisto } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
 import React, { useRef, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import * as Animatable from 'react-native-animatable';
+
+import { Fontisto } from '@expo/vector-icons';
+import * as WebBrowser from 'expo-web-browser';
+
 import Button from '../../components/Button';
 import Logo from '../../components/Logo';
 import Modal from '../../components/Modal';

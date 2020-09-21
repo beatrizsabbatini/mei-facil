@@ -1,6 +1,9 @@
-import * as WebBrowser from 'expo-web-browser';
+
 import React from 'react';
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
+
+import * as WebBrowser from 'expo-web-browser';
+
 import BasicContainer from '../../../../components/BasicContainer';
 import BasicTitle from '../../../../components/BasicTitle';
 import { metrics } from '../../../../styles';
@@ -22,11 +25,11 @@ const BlogSection = () => {
         data={blogData}
         horizontal
         showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={({ item, index }) => {
           return (
             <TouchableOpacity onPress={() => openBrowser(item.url)}>
               <BasicContainer
-                key={item.id.toString()}
                 style={[
                   styles.container,
                   index === 0 && { marginLeft: metrics.doubleBaseMargin },

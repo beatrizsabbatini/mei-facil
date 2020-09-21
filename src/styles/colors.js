@@ -1,7 +1,7 @@
 export default {
   Primary: '#00A5EF',
   Secondary: '#FFC801',
-  DarkerYellow: '#E5B03C',
+  DarkerYellow: '#E4B03B',
   White: '#fff',
   Black: '#413116',
   Blue: '#0073CC',
@@ -16,5 +16,6 @@ export default {
   ButtonTextDisabled: '#999999',
   Grey: '#797D7F',
   TextGrey: '#6A6E6F',
+  TitleGrey: '#505050',
   BackgroundGrey: '#DDDDDD',
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
+
 import BasicContainer from '../../../../components/BasicContainer';
 import BasicTitle from '../../../../components/BasicTitle';
 import TaxContainer from '../../../../components/TaxContainer';
