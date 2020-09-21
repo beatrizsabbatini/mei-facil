@@ -22,12 +22,10 @@ const BlogSection = () => {
         data={blogData}
         horizontal
         showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={({ item, index }) => {
           return (
-            <TouchableOpacity
-              key={item.id.toString()}
-              onPress={() => openBrowser(item.url)}
-            >
+            <TouchableOpacity onPress={() => openBrowser(item.url)}>
               <BasicContainer
                 style={[
                   styles.container,
