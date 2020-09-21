@@ -10,7 +10,7 @@ import Logo from '../../components/Logo';
 import HomeScreen from '../../screens/HomeScreen';
 import NotificationsScreen from '../../screens/NotificationsScreen';
 import ProfileScreen from '../../screens/ProfileScreen';
-import { colors } from '../../styles';
+import { colors, metrics } from '../../styles';
 
 const Stack = createStackNavigator();
 
@@ -71,15 +71,17 @@ const HomeNavigator = ({ navigation }) => {
         options={{
           headerStyle: {
             backgroundColor: '#DDDDDD',
+            elevation: 0,
           },
           headerTintColor: colors.White,
           headerTitle: '',
           headerLeft: () => (
-            <TouchableOpacity onPress={() => navigation.pop()}>
+            <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
               <MaterialCommunityIcons
                 name="arrow-left"
-                size={24}
+                size={26}
                 color={colors.DarkerYellow}
+                style={{ paddingLeft: metrics.baseMargin }}
               />
             </TouchableOpacity>
           ),
