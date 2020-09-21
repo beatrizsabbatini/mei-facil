@@ -1,7 +1,9 @@
-import { Fontisto, Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
 import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+
+import { Fontisto, Ionicons } from '@expo/vector-icons';
+import * as WebBrowser from 'expo-web-browser';
+
 import Button from '../../../../components/Button';
 import { colors } from '../../../../styles';
 import styles from '../styles';

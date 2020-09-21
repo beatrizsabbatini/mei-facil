@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
+
 import NotificationItem from '../../components/NotificationItem';
 import { notificationsData } from '../../utils/mocks';
 

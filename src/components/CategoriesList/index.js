@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
+
 import CategoryBox from '../CategoryBox';
 import styles from './styles';
 

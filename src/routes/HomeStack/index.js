@@ -1,11 +1,13 @@
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
+
 import {
   FontAwesome5,
   MaterialCommunityIcons,
   MaterialIcons,
 } from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
-import React from 'react';
-import { TouchableOpacity } from 'react-native';
+
 import Logo from '../../components/Logo';
 import HomeScreen from '../../screens/HomeScreen';
 import NotificationsScreen from '../../screens/NotificationsScreen';

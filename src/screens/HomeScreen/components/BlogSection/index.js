@@ -1,6 +1,9 @@
-import * as WebBrowser from 'expo-web-browser';
+
 import React from 'react';
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
+
+import * as WebBrowser from 'expo-web-browser';
+
 import BasicContainer from '../../../../components/BasicContainer';
 import BasicTitle from '../../../../components/BasicTitle';
 import { metrics } from '../../../../styles';

@@ -1,8 +1,10 @@
-import { Feather, Fontisto } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
 import React, { useEffect, useRef, useState } from 'react';
 import { Keyboard, Text, View } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text';
+
+import { Feather, Fontisto } from '@expo/vector-icons';
+import * as WebBrowser from 'expo-web-browser';
+
 import Button from '../../../../components/Button';
 import { colors } from '../../../../styles';
 import styles from '../styles';

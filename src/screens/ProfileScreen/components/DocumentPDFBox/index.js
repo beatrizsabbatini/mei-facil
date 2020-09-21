@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
+
 import RepublicaFederativa from '../../../../assets/republica-federativa.png';
 import BasicContainer from '../../../../components/BasicContainer';
 import styles from './styles';

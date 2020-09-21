@@ -1,6 +1,9 @@
-import { AntDesign } from '@expo/vector-icons';
+
 import React from 'react';
 import { Modal, TouchableOpacity, View } from 'react-native';
+
+import { AntDesign } from '@expo/vector-icons';
+
 import { colors } from '../../styles';
 import styles from './styles';
 

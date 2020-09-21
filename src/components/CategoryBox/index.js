@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity } from 'react-native';
+
 import BasicContainer from '../BasicContainer';
 import styles from './styles';
 
