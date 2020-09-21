@@ -23,7 +23,8 @@ const DASSection = ({navigation}) => {
 					monthAndYear="Setembro 2020"
 					lastItem
 				/>
-				<TouchableOpacity onPress={() => navigation.navigate('PayTaxScreen')}>
+				<TouchableOpacity onPress={() => 
+					navigation.navigate('PayTaxScreen')}>
 					<Text style={styles.seeCompleteList}>Ver lista completa</Text>
 				</TouchableOpacity>
 			</BasicContainer>
