@@ -7,7 +7,10 @@ export default {
   DarkBlue: '#104F9B',
   LightBlue: '#3ECCDA',
   Green: '#12C250',
+  LightGreen: '#D8FECB',
+  LightYellow: '#FDEEAC',
   Red: '#DD0031',
   ButtonDisabled: '#CDCDCD',
   ButtonTextDisabled: '#999999',
+  Grey: '#797D7F',
 };

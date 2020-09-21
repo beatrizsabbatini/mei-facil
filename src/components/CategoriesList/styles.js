@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { metrics } from '../../styles';
 
 const styles = StyleSheet.create({
-  homeScreenContainer: { paddingHorizontal: metrics.bigMargin },
+  list: {
+    width: '100%',
+  },
 });
 
 export default styles;
