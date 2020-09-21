@@ -1,9 +1,15 @@
-import { FontAwesome5, MaterialIcons } from '@expo/vector-icons';
+import {
+  FontAwesome5,
+  MaterialCommunityIcons,
+  MaterialIcons,
+} from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import Logo from '../../components/Logo';
 import HomeScreen from '../../screens/HomeScreen';
+import NotificationsScreen from '../../screens/NotificationsScreen';
+import ProfileScreen from '../../screens/ProfileScreen';
 import { colors } from '../../styles';
 
 const Stack = createStackNavigator();
@@ -22,7 +28,9 @@ const HomeNavigator = ({ navigation }) => {
           headerTitle: () => <Logo />,
           headerTitleAlign: 'center',
           headerRight: () => (
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('NotificationsScreen')}
+            >
               <MaterialIcons
                 name="notifications-none"
                 size={23}
@@ -32,12 +40,46 @@ const HomeNavigator = ({ navigation }) => {
             </TouchableOpacity>
           ),
           headerLeft: () => (
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('ProfileScreen')}
+            >
               <FontAwesome5
                 name="user"
                 size={20}
                 color={colors.White}
                 style={{ paddingLeft: 40 }}
+              />
+            </TouchableOpacity>
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="NotificationsScreen"
+        component={NotificationsScreen}
+        options={{
+          headerStyle: {
+            backgroundColor: colors.Primary,
+          },
+          headerTintColor: colors.White,
+          headerTitle: 'Notificações',
+          headerTitleAlign: 'left',
+        }}
+      />
+      <Stack.Screen
+        name="ProfileScreen"
+        component={ProfileScreen}
+        options={{
+          headerStyle: {
+            backgroundColor: '#DDDDDD',
+          },
+          headerTintColor: colors.White,
+          headerTitle: '',
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.pop()}>
+              <MaterialCommunityIcons
+                name="arrow-left"
+                size={24}
+                color={colors.DarkerYellow}
               />
             </TouchableOpacity>
           ),

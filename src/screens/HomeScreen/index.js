@@ -9,7 +9,6 @@ import BlogSection from './components/BlogSection';
 import DASSection from './components/DASSection';
 import HomeCategorySection from './components/HomeCategorySection';
 import PayTaxBox from './components/PayTaxBox';
-import styles from './styles';
 
 const HomeScreen = ({ navigation }) => {
   const sections = [
@@ -22,7 +21,7 @@ const HomeScreen = ({ navigation }) => {
     { id: 2, name: 'Conteúdo Exclusivo', categories: exclusiveContentData },
   ];
   return (
-    <ScrollView contentContainerStyle={styles.homeScreenContainer}>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <PayTaxBox navigation={navigation} />
       <DASSection />
       {sections.map((item) => (
