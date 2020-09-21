@@ -5,11 +5,12 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.Primary,
     padding: metrics.baseMargin,
-    width: '100%',
+    width: '87%',
     alignSelf: 'center',
     marginVertical: metrics.doubleBaseMargin,
     borderRadius: 5,
     alignItems: 'center',
+    marginHorizontal: metrics.bigMargin,
   },
   buttonText: {
     fontFamily: fonts.poppinsSemiBold,

@@ -3,7 +3,7 @@ import { metrics } from '../../../../styles';
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: metrics.doubleBaseMargin,
+    margin: metrics.doubleBaseMargin,
     width: '100%',
   },
 });
