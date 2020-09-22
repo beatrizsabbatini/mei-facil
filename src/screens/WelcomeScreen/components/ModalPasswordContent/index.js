@@ -16,10 +16,6 @@ const ModalPasswordContent = ({
 	const [password, setPassword] = useState('');
 	const [passwordVisible, setPasswordVisible] = useState(false);
 
-	async function openBrowser() {
-		await WebBrowser.openBrowserAsync('https://www.meifacil.com/termos-de-uso');
-	}
-
 	return (
 		<View style={styles.contentContainer}>
 			<Text style={styles.modalTitle}>Agora, digite sua senha</Text>
@@ -48,7 +44,7 @@ const ModalPasswordContent = ({
 				</View>
 				<View style={styles.yellowLine} />
 				<TouchableOpacity
-					onPress={() => navigation.navigate('ForgotPasswordScreen')}
+					onPress={() => {}}
 					style={styles.forgotPassword}
 				>
 					<Text style={[styles.agreeToTermsSecondLine]}>Esqueci a senha</Text>
