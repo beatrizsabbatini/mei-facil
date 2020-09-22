@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { statuses } from '../../utils/constants';
 import styles from './styles';
 
-const TaxContainer = ({ status, date, monthAndYear, lastItem }) => {
+const TaxContainer = ({ status, date, monthAndYear, lastItem, hideLine }) => {
 	return (
 		<>
 			<TouchableOpacity style={styles.taxContainer} onPress={() => {}}>
@@ -25,7 +25,7 @@ const TaxContainer = ({ status, date, monthAndYear, lastItem }) => {
 					<Text style={styles.commonStyles}>{status}</Text>
 				</View>
 			</TouchableOpacity>
-			{!lastItem && <View style={styles.separator} />}
+			{!lastItem && !hideLine && <View style={styles.separator} />}
 		</>
 	);
 };

@@ -6,6 +6,9 @@ const styles = StyleSheet.create({
 	background: {    
 		margin: metrics.doubleBaseMargin
 	},
+	buttonContainer: {
+		marginHorizontal: metrics.doubleBaseMargin
+	},
 
 })
 
