@@ -79,6 +79,7 @@ const WelcomeScreen = ({ navigation }) => {
 							setPasswordModalVisible={setModalPasswordOpen}
 						/>
 					</Modal>
+					
 				</Animatable.View>
 			)}
 		</View>
