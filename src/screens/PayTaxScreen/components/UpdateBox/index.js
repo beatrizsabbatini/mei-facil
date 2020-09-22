@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import { fonts } from '../../../../styles';
 import styles from './styles';
@@ -13,6 +13,9 @@ const UpdateBox = () => {
 			</Text>? Clique para atualizar o seu status!</Text>
 		<Text style={styles.message}>Não pague novamente, a confirmação pode
 		levaraté 15 dias da data de pagamento</Text>
+		<TouchableOpacity>
+			<Text style={styles.updateTaxesButton}>atualizar pagamentos</Text>
+		</TouchableOpacity>
 	</View>
 }
 

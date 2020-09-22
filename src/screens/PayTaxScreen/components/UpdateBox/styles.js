@@ -12,20 +12,34 @@ const styles = StyleSheet.create({
 	title:{
 		color: colors.TitleBlack,
 		fontFamily: fonts.robotoBold,
-		fontSize: 22,
+		fontSize: 20,
     
 	},
 	subtitle: {
 		marginVertical: metrics.baseMargin,
 		fontFamily: fonts.robotoRegular,
-		fontSize: fonts.regular,
+		fontSize: 15,
 		lineHeight: 22
 	},
 	message: {
 		marginVertical: metrics.smallMargin,
 		fontFamily: fonts.robotoRegular,
-		fontSize: fonts.small,
+		fontSize: 12,
 		color: colors.ButtonTextDisabled
+	},
+	updateTaxesButton: {
+		marginTop: metrics.baseMargin,
+		fontFamily: fonts.robotoBold,
+		letterSpacing: 2,
+		fontSize: fonts.regular,
+		padding: 8,
+		textAlign: 'center',
+		paddingTop: 15,
+		textTransform: 'uppercase',
+		borderWidth: 3,
+		color: colors.Black,
+		borderColor: colors.Secondary,
+		borderRadius: metrics.smallRadius
 	}
 });
 
