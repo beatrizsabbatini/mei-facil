@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "neon",
-    "slug": "neon",
+    "name": "MEI Fácil",
+    "slug": "MEI Fácil",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#00A5EF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
