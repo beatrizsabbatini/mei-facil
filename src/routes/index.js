@@ -14,8 +14,8 @@ const AppNavigator = () => {
 		<>
 			<StatusBar style="light" />
 			<Stack.Navigator headerMode={'none'}>
-				<Stack.Screen name="Home" component={HomeStack} />
 				<Stack.Screen name="Login" component={LoginStack} />
+				<Stack.Screen name="Home" component={HomeStack} />
 			</Stack.Navigator>
 		</>
 	);
