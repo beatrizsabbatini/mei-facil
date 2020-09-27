@@ -190,13 +190,13 @@ export const profileButtonsData = [
 	{
 		id: 0,
 		title: 'Dados Pessoais',
-		navigateTo: 'HomeScreen',
+		navigateTo: 'UserPersonalDataScreen',
 		imgPath: UserBox,
 	},
 	{
 		id: 1,
 		title: 'Dados da Empresa',
-		navigateTo: 'HomeScreen',
+		navigateTo: 'CompanyDataScreen',
 		imgPath: Clipboard,
 	},
 	{
