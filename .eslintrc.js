@@ -18,7 +18,7 @@ module.exports = {
 	},
 	plugins: ['eslint-plugin-import-helpers'],
 	rules: {
-		"max-len": [2, 120, 4, {"ignoreUrls": true}],
+		'max-len': [2, 120, 4, { ignoreUrls: true }],
 		'indent': [2, 'tab'],
 		'import-helpers/order-imports': [
 			'warn',

@@ -9,10 +9,12 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Logo from '../../components/Logo';
+import CompanyDataScreen from '../../screens/CompanyDataScreen';
 import HomeScreen from '../../screens/HomeScreen';
 import NotificationsScreen from '../../screens/NotificationsScreen';
 import PayTaxScreen from '../../screens/PayTaxScreen';
 import ProfileScreen from '../../screens/ProfileScreen';
+import UserPersonalDataScreen from '../../screens/UserPersonalDataScreen';
 import { colors, metrics } from '../../styles';
 
 const Stack = createStackNavigator();
@@ -20,6 +22,7 @@ const Stack = createStackNavigator();
 const HomeNavigator = ({ navigation }) => {
 	return (
 		<Stack.Navigator>
+		
 			<Stack.Screen
 				name="HomeScreen"
 				component={HomeScreen}
@@ -100,6 +103,28 @@ const HomeNavigator = ({ navigation }) => {
 							/>
 						</TouchableOpacity>
 					),
+				}}
+			/>
+			<Stack.Screen
+				name="UserPersonalDataScreen"
+				component={UserPersonalDataScreen}
+				options={{
+					headerStyle: {
+						backgroundColor: colors.Primary,
+					},
+					headerTintColor: colors.White,
+					headerTitle: 'Dados Pessoais',
+				}}
+			/>
+			<Stack.Screen
+				name="CompanyDataScreen"
+				component={CompanyDataScreen}
+				options={{
+					headerStyle: {
+						backgroundColor: colors.Primary,
+					},
+					headerTintColor: colors.White,
+					headerTitle: 'Dados da Empresa',
 				}}
 			/>
 		</Stack.Navigator>

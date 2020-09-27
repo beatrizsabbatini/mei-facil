@@ -15,7 +15,7 @@ export default {
 	Red: '#DD0031',
 	ButtonDisabled: '#CDCDCD',
 	ButtonTextDisabled: '#999999',
-	Grey: '#797D7F',
+	Grey: '#8F8F8F',
 	TextGrey: '#6A6E6F',
 	TitleGrey: '#505050',
 	BackgroundGrey: '#DDDDDD',
