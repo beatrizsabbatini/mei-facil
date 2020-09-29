@@ -15,7 +15,9 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { AppLoading } from 'expo';
 
+import { UserProvider } from './src/contexts/UserContext';
 import AppNavigator from './src/routes';
+import { setNavigator } from './src/services/navigationService';
 import store from './src/store';
 
 const App = () => {
@@ -33,9 +35,13 @@ const App = () => {
 	} else {
 		return (
 			<Provider store={store}>
-				<NavigationContainer>
-					<AppNavigator />
-				</NavigationContainer>
+				<UserProvider>
+					<NavigationContainer ref={navigatorRef => {
+          		setNavigator(navigatorRef);
+        		}}>
+						<AppNavigator />
+					</NavigationContainer>
+				</UserProvider>
 			</Provider>
 		);
 	}

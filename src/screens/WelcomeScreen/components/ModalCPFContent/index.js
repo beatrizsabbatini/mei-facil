@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Keyboard, Text, View } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text';
 
@@ -6,6 +6,7 @@ import { Feather, Fontisto } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 
 import Button from '../../../../components/Button';
+import { UserContext } from '../../../../contexts/UserContext';
 import { colors } from '../../../../styles';
 import styles from '../styles';
 
@@ -13,6 +14,8 @@ const ModalCPFContent = ({ setPasswordModalVisible }) => {
 	const [cpf, setCpf] = useState('');
 	const [isValid, setIsValid] = useState(false);
 	const cpfRef = useRef(null);
+
+	const { setUserCpf } = useContext(UserContext);
 
 	useEffect(() => {
 		const value = cpfRef.current.isValid();
@@ -68,7 +71,9 @@ const ModalCPFContent = ({ setPasswordModalVisible }) => {
 			</View>
 			<View style={styles.buttonContainer}>
 				<Button
-					onPress={() => setPasswordModalVisible(true)}
+					onPress={() => {
+						setUserCpf(cpf);
+						setPasswordModalVisible(true)}}
 					disabled={!isValid}
 					text="Continuar"
 					icon={
