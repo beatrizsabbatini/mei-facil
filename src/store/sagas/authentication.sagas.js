@@ -25,6 +25,7 @@ function* requestAuthentication({payload}) {
 
 	} catch (err) {
 
+		console.log(err.response.data.message)
 		yield put(authenticationErrors(err.response.data.message));
 	}
 }

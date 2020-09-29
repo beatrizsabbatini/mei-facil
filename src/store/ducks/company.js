@@ -7,6 +7,7 @@ export const Types = {
 
 //Initial state
 const initialState = {
+	token: undefined,
 	data: undefined,
 	errors: undefined,
 	loading: false
@@ -20,7 +21,7 @@ export default function reducer(state = initialState, action) {
 			...state,
 			loading: true,
 			errors: undefined,
-			cpf: action.payload
+			token: action.payload
 		};
 	case Types.GET_COMPANY_ERRORS:
 		return {
@@ -42,17 +43,17 @@ export default function reducer(state = initialState, action) {
 }
 
 // Action Creators
-export function companyRequest(cpf) {
+export function companyRequest(token) {
 	return {
 		type: Types.GET_COMPANY_REQUEST,
-		payload: cpf
+		payload: token
 	};
 }
 
-export function companyErrors(cpf) {
+export function companyErrors(error) {
 	return {
 		type: Types.GET_COMPANY_ERRORS,
-		payload: cpf
+		payload: error
 	};
 }
 

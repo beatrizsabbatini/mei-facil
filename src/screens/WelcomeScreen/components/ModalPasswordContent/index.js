@@ -20,12 +20,17 @@ const ModalPasswordContent = ({
 	const dispatch = useDispatch();
 	const token = useSelector(state => state.authentication.token)
 	const errors = useSelector(state => state.authentication.errors)
+	const {setToken} = useContext(UserContext)
 
 	useEffect(() => {
 		setShowError(false)
 		if (token !== undefined){
 			setPasswordModalVisible(false);
 			setCPFModalVisible(false);
+		
+			console.log('TOKEN No modal:', token)
+
+			setToken(token)
 		}
 	}, [token])
 
