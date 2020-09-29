@@ -15,25 +15,14 @@ import styles from './styles';
 
 const ProfileScreen = ({ navigation }) => {
 	const dispatch = useDispatch();
-	const errors = useSelector(state => state.authentication.errors);
-
-	useEffect(() => {
-		console.log('errors', errors)
-	}, [errors])
 
 	async function handleLogout(){
 		await AsyncStorage.removeItem('token');
 		dispatch(authenticationReset());
 		navigation.navigate('WelcomeScreen');
-
-
 	}
 
-	const logoutButton = {
-		title: 'Sair do aplicativo',
-		imgPath: Logout,
-	}
-	
+
 	return (
 		<ScrollView showsVerticalScrollIndicator={false}>
 			<View style={styles.background}>

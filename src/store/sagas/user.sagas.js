@@ -7,14 +7,16 @@ import {
 	Types
 } from '../../store/ducks/user';
 
-function* requestUserData() {
+function* requestUserData({payload}) {
 	try {
 
-		const response = yield call(getUserPersonalData);
+		const response = yield call(getUserPersonalData, {token: payload.token, cpf: payload.cpf});
 
 		yield put(userSuccess(response.data));
 	} catch (err) {
-		yield put(userErrors(err));
+		console.log(err.response.data.message)
+		console.log('token:', payload.token)
+		yield put(userErrors(err.response.data.message));
 	}
 }
 

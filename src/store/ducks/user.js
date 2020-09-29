@@ -7,6 +7,8 @@ export const Types = {
 
 //Initial state
 const initialState = {
+	cpf: undefined,
+	token: undefined,
 	data: undefined,
 	errors: undefined,
 	loading: false
@@ -20,7 +22,8 @@ export default function reducer(state = initialState, action) {
 			...state,
 			loading: true,
 			errors: undefined,
-			cpf: action.payload
+			token: action.payload.token,
+			cpf: action.payload.cpf
 		};
 	case Types.GET_USER_ERRORS:
 		return {
@@ -42,17 +45,17 @@ export default function reducer(state = initialState, action) {
 }
 
 // Action Creators
-export function userRequest(cpf) {
+export function userRequest({token, cpf}) {
 	return {
 		type: Types.GET_USER_REQUEST,
-		payload: cpf
+		payload: {token: token, cpf: cpf}
 	};
 }
 
-export function userErrors(cpf) {
+export function userErrors(error) {
 	return {
 		type: Types.GET_USER_ERRORS,
-		payload: cpf
+		payload: error
 	};
 }
 

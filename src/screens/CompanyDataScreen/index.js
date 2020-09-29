@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ScrollView, ActivityIndicator, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import InfoContainer from '../../components/InfoContainer';
+import { UserContext } from '../../contexts/UserContext';
 import { companyRequest } from '../../store/ducks/company';
 import { colors } from '../../styles';
 import { formatCurrency } from '../../utils/functions';
@@ -12,9 +13,10 @@ const CompanyDataScreen = () => {
 	const dispatch = useDispatch();
 	const companyData = useSelector(state => state.company.data);
 	const loading = useSelector(state => state.company.loading);
+	const {token} = useContext(UserContext);
 
 	useEffect(() => {
-		dispatch(companyRequest())
+		dispatch(companyRequest({token: token}))
 	}, [])
 
 	return (

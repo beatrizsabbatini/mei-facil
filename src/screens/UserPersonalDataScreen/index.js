@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { View, ScrollView, ActivityIndicator } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import InfoContainer from '../../components/InfoContainer';
+import { UserContext } from '../../contexts/UserContext';
 import { userRequest } from '../../store/ducks/user';
 import { colors } from '../../styles';
 import styles from './styles';
@@ -11,9 +12,10 @@ const UserPersonalDataScreen = () => {
 	const dispatch = useDispatch();
 	const userData = useSelector(state => state.user.data);
 	const loading = useSelector(state => state.user.loading);
+	const {token, userCpf} = useContext(UserContext);
 
 	useEffect(() => {
-		dispatch(userRequest())
+		dispatch(userRequest({token: token, cpf: userCpf}))
 	}, [])
 
 	return (
