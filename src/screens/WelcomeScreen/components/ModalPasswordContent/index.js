@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Fontisto, Ionicons } from '@expo/vector-icons';
@@ -13,7 +13,6 @@ import styles from '../styles';
 const ModalPasswordContent = ({
 	setPasswordModalVisible,
 	setCPFModalVisible,
-	navigation,
 }) => {
 	const [password, setPassword] = useState('');
 	const [passwordVisible, setPasswordVisible] = useState(false);
@@ -29,6 +28,12 @@ const ModalPasswordContent = ({
 			setCPFModalVisible(false);
 		}
 	}, [token])
+
+	useEffect(() => {
+		if (errors && showError){
+			Alert.alert(errors)
+		}
+	}, [errors])
 
 	const { userCpf } = useContext(UserContext);
 
@@ -76,9 +81,6 @@ const ModalPasswordContent = ({
 				>
 					<Text style={[styles.agreeToTermsSecondLine]}>Esqueci a senha</Text>
 				</TouchableOpacity>
-				{showError && (
-					<Text>{errors}</Text>
-				)}
 			
 			</View>
 			<View style={styles.buttonContainer}>
