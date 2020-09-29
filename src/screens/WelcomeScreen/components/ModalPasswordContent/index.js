@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Fontisto, Ionicons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
 
 import Button from '../../../../components/Button';
+import { UserContext } from '../../../../contexts/UserContext';
+import { authenticationRequest } from '../../../../store/ducks/authentication';
 import { colors } from '../../../../styles';
 import styles from '../styles';
 
@@ -15,6 +17,31 @@ const ModalPasswordContent = ({
 }) => {
 	const [password, setPassword] = useState('');
 	const [passwordVisible, setPasswordVisible] = useState(false);
+	const [showError, setShowError] = useState(false);
+	const dispatch = useDispatch();
+	const token = useSelector(state => state.authentication.token)
+	const errors = useSelector(state => state.authentication.errors)
+
+	useEffect(() => {
+		setShowError(false)
+		if (token !== undefined){
+			setPasswordModalVisible(false);
+			setCPFModalVisible(false);
+		}
+	}, [token])
+
+	const { userCpf } = useContext(UserContext);
+
+	 function handleSubmit(){
+
+		 dispatch(authenticationRequest({
+			 cpf: userCpf,
+			 password: password, 
+		}));
+
+		setShowError(true)
+
+	}
 
 	return (
 		<View style={styles.contentContainer}>
@@ -49,14 +76,14 @@ const ModalPasswordContent = ({
 				>
 					<Text style={[styles.agreeToTermsSecondLine]}>Esqueci a senha</Text>
 				</TouchableOpacity>
+				{showError && (
+					<Text>{errors}</Text>
+				)}
+			
 			</View>
 			<View style={styles.buttonContainer}>
 				<Button
-					onPress={() => {
-						setPasswordModalVisible(false);
-						setCPFModalVisible(false);
-						navigation.navigate('Home');
-					}}
+					onPress={handleSubmit}
 					disabled={password.length < 3}
 					text="Acessar"
 					icon={

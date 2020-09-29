@@ -7,7 +7,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { colors } from '../../../../styles';
 import styles from './styles';
 
-const ButtonsListItem = ({ item, navigation }) => {
+const ButtonsListItem = ({ item, navigation, action }) => {
 	return (
 		<>
 			<TouchableOpacity

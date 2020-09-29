@@ -11,7 +11,6 @@ import Heart from '../assets/heart.png';
 import Info from '../assets/info.png';
 import Questions from '../assets/information.png';
 import Invoice from '../assets/invoice.png';
-import Logout from '../assets/logout.png';
 import NF from '../assets/nf.png';
 import TV from '../assets/tv.png';
 import UserBox from '../assets/user-box.png';
@@ -204,8 +203,7 @@ export const profileButtonsData = [
 		title: 'Informações Gerais',
 		navigateTo: 'HomeScreen',
 		imgPath: Info,
-	},
-	{ id: 3, title: 'Sair do Aplicativo', navigateTo: 'Login', imgPath: Logout },
+	}
 ];
 
 export const taxesData = [
